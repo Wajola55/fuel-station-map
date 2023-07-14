@@ -2,7 +2,7 @@
 
 This is a simple Streamlit app that displays the locations of fuel stations in Poland. It uses the OpenStreetMap API to retrieve the fuel station data based on the specified city. The app then plots the fuel station locations on an interactive map using Plotly.
 
-##### Note: This app is currently a work in progress and may undergo further improvements and enhancements.
+<b> Note</b> : This app is currently a work in progress and may undergo further improvements and enhancements.
 
 ## Features:
 
