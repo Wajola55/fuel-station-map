@@ -1,22 +1,25 @@
 ## Fuel Station Map
 
-This is a simple Streamlit app that displays the locations of fuel stations in Poland. It uses the OpenStreetMap API to retrieve the fuel station data based on the specified city. The app then plots the fuel station locations on an interactive map using Plotly.
+![logo](https://github.com/Wajola55/fuel-station-map/assets/118658753/222e14f6-ba58-45fd-9873-04e11b4bda5f)
+
+
+This interactive web application allows users to search for fuel stations in any city in Poland. Users can also filter the fuel stations based on the fuel provider. The application displays the location of the fuel stations on a map and provides a table with the filtered results.
 
 <b> Note</b> : This app is currently a work in progress and may undergo further improvements and enhancements.
 
 ## Features:
 
-<li>Enter a city name to search for fuel stations in that city.
-<li>View the locations of the fuel stations on an interactive map.
-<li>Display the names of the fuel providers in a table.
+<li> <b>Search by City:</b> Users can enter the name of a city to find fuel stations in that city.
+<li> <b>Filter by Fuel Provider:</b> Users can search for fuel stations based on the name of the fuel provider.
+<li> <b>Interactive Map:</b> The application displays the location of the fuel stations on an interactive map powered by OpenStreetMap and Plotly.
+<li> <b>Results Table:</b> The filtered fuel stations are presented in a table format, showing the names of the stations.
 
 ## Technologies Used:
 
-<li>Python
-<li>Streamlit: Used for building the web app.
-<li>Requests: Used for making API requests.
-<li>Pandas: Used for data manipulation and processing.
-<li>Plotly: Used for creating interactive maps and visualizations.
+<li> <b> Streamlit:</b> Python library for building interactive web applications.
+<li> <b> Requests:</b> Used for making API requests.
+<li> <b> Pandas:</b> Used for data manipulation and processing.
+<li> <b> Plotly:</b> Used for creating interactive maps and visualizations.
 
 ## How to Run:
 1.Install the required Python packages:
