@@ -3,7 +3,11 @@
 ![logo](https://github.com/Wajola55/fuel-station-map/assets/118658753/222e14f6-ba58-45fd-9873-04e11b4bda5f)
 
 
-This interactive web application allows users to search for fuel stations in any city in Poland. Users can also filter the fuel stations based on the fuel provider. The application displays the location of the fuel stations on a map and provides a table with the filtered results.
+This interactive web application allows users to search for fuel stations in any city in Poland. Users can also filter the fuel stations based on the fuel provider. 
+
+The application utilizes the OpenStreetMap API to fetch the fuel station data and displays the locations on an interactive map powered by Plotly. Users can explore the map, zoom in/out, and interact with the markers representing the fuel stations.
+
+In addition to the map, the application presents the filtered fuel stations in a table format. The table includes the names of the fuel stations, and if available, it also provides the direction, street number, and name associated with each fuel station.
 
 <b> Note</b> : This app is currently a work in progress and may undergo further improvements and enhancements.
 
