@@ -7,17 +7,16 @@ import base64
 # OpenStreetMap API URL
 OSM_API_URL = "https://overpass-api.de/api/interpreter"
 
-
 streamlit_style = """
-			<style>
-			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+            <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-			html, body, [class*="css"]  {
-			font-family: 'Roboto', sans-serif;
+            html, body, [class*="css"]  {
+            font-family: 'Roboto', sans-serif;
             font-size: 18px;
-			}
-			</style>
-			"""
+            }
+            </style>
+            """
 st.markdown(streamlit_style, unsafe_allow_html=True)
 
 @st.cache
@@ -44,11 +43,15 @@ def get_fuel_stations(city):
         name = element["tags"].get("name", "Unknown")
         latitude = element["lat"]
         longitude = element["lon"]
+        direction = element["tags"].get("addr:street", "")
+        street_number = element["tags"].get("addr:housenumber", "")
 
         stations.append({
             "Name": name,
             "Latitude": latitude,
             "Longitude": longitude,
+            "Direction": direction,
+            "Street Number": street_number
         })
 
     return pd.DataFrame(stations)
@@ -61,9 +64,7 @@ def get_image_base64(image_path):
 logo_image_path = "logo.png"
 logo_image_base64 = get_image_base64(logo_image_path)
 
-
 st.markdown(f'<p align="center"><img src="data:image/png;base64,{logo_image_base64}" width="350"></p>', unsafe_allow_html=True)
-
 
 st.markdown('''
 Witaj na interaktywnej mapie stacji paliw w Polsce! 💼 
@@ -72,7 +73,6 @@ Ta aplikacja umożliwia wyszukiwanie stacji paliw w dowolnym mieście w Polsce. 
 
 Zachęcamy do eksploracji!
 ''')
-
 
 city = st.text_input("Podaj miasto:", placeholder="Enter city name here...")
 
@@ -113,8 +113,7 @@ if city:
             )
         )
 
-        
         st.plotly_chart(fig)
 
         # Show the filtered DataFrame as a table
-        st.table(filtered_df[["Name"]])
+        st.table(filtered_df[["Name", "Direction", "Street Number"]])
